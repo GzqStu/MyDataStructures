@@ -1,4 +1,4 @@
-package com.gao.cn.Array;
+package com.gao.cn.array;
 
 /**
  * 自定义数组
@@ -91,6 +91,24 @@ public class Array<E> {
             throw new IllegalArgumentException("Get failed. index is illegal");
         }
         return data[index];
+    }
+
+    /**
+     * 获取最后一个元素
+     *
+     * @return
+     */
+    public E getLast() {
+        return get(size - 1);
+    }
+
+    /**
+     * 获取第一个元素
+     *
+     * @return
+     */
+    public E getFirst() {
+        return get(0);
     }
 
     /**

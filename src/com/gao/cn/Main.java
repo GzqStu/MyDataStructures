@@ -1,6 +1,6 @@
 package com.gao.cn;
 
-import com.gao.cn.Array.Array;
+import com.gao.cn.array.Array;
 
 public class Main {
 

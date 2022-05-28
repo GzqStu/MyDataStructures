@@ -1,4 +1,4 @@
-package com.gao.cn.Array;
+package com.gao.cn.array;
 
 /**
  * @author ：gaozhiqi
