@@ -16,7 +16,5 @@ public class StackMain {
         System.out.println(stack);
         System.out.println(stack.peek());
         System.out.println(stack);
-
-
     }
 }
