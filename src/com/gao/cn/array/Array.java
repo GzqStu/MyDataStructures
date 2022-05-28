@@ -1,5 +1,7 @@
 package com.gao.cn.array;
 
+import java.util.LinkedList;
+
 /**
  * 自定义数组
  *
