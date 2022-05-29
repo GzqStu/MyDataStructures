@@ -162,6 +162,45 @@ public class LinkedList<E> {
         cur.e = e;
     }
 
+    /**
+     * 输出某个位置的元素
+     *
+     * @param index
+     * @return
+     */
+    public E remove(int index) {
+        if (index < 0 || index >= size) {
+            throw new IllegalArgumentException("remove failed.index is illegal ");
+        }
+        Node prev = dummyHead;
+        for (int i = 0; i < index; i++) {
+            prev = prev.next;
+        }
+        Node retNode = prev.next;
+        prev.next = retNode.next;
+        retNode.next = null;
+        size--;
+        return retNode.e;
+    }
+
+    /**
+     * 删除第一个元素
+     *
+     * @return
+     */
+    public E removeFirst() {
+        return remove(0);
+    }
+
+    /**
+     * 删除最后一个元素
+     *
+     * @return
+     */
+    public E removeLast() {
+        return remove(size - 1);
+    }
+
     @Override
     public String toString() {
 
@@ -182,6 +221,12 @@ public class LinkedList<E> {
             System.out.println(linkedList);
         }
         linkedList.add(2, 777);
+        System.out.println(linkedList);
+        linkedList.remove(2);
+        System.out.println(linkedList);
+        linkedList.removeFirst();
+        System.out.println(linkedList);
+        linkedList.removeLast();
         System.out.println(linkedList);
     }
 }
