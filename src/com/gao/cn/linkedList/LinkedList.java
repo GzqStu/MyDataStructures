@@ -8,7 +8,7 @@ package com.gao.cn.linkedList;
  */
 public class LinkedList<E> {
 
-    private Node head;
+    private Node dummyHead;
     private int size;
 
     private class Node {
@@ -35,7 +35,7 @@ public class LinkedList<E> {
     }
 
     public LinkedList() {
-        this.head = null;
+        this.dummyHead = new Node(null, null);
         size = 0;
     }
 
@@ -63,8 +63,7 @@ public class LinkedList<E> {
      * @param e
      */
     public void addFirst(E e) {
-        head = new Node(e, head);
-        size++;
+        add(0, e);
     }
 
     /**
@@ -77,19 +76,112 @@ public class LinkedList<E> {
         if (index < 0 || index > size) {
             throw new IllegalArgumentException("add failed.index is illegal ");
         }
-        if (index == 0) {
-            addFirst(e);
-        } else {
-            Node prev = head;
-            for (int i = 0; i < index - 1; i++) {
-                prev = prev.next;
-            }
-            prev.next = new Node(e, prev.next);
-            size++;
+        Node prev = dummyHead;
+        for (int i = 0; i < index; i++) {
+            prev = prev.next;
         }
+        prev.next = new Node(e, prev.next);
+        size++;
     }
 
+    /**
+     * 在链尾加一个元素
+     *
+     * @param e
+     */
     public void addLast(E e) {
         add(size, e);
+    }
+
+    /**
+     * 查询某个位置的元素
+     *
+     * @param index
+     * @return
+     */
+    public E get(int index) {
+        if (index < 0 || index >= size) {
+            throw new IllegalArgumentException("get failed.index is illegal ");
+        }
+        Node cur = dummyHead.next;
+        for (int i = 0; i < index; i++) {
+            cur = cur.next;
+        }
+        return cur.e;
+    }
+
+    /**
+     * 获取头节点元素
+     *
+     * @return
+     */
+    public E getFirst() {
+        return get(0);
+    }
+
+    /**
+     * 获取尾节点元素
+     *
+     * @return
+     */
+    public E getLast() {
+        return get(size - 1);
+    }
+
+    /**
+     * 查询是否包含某一个元素
+     *
+     * @param e
+     * @return
+     */
+    public boolean contains(E e) {
+        Node cur = dummyHead.next;
+        while (cur != null) {
+            if (cur.e.equals(e)) {
+                return true;
+            }
+            cur = cur.next;
+        }
+        return false;
+    }
+
+    /**
+     * 修改某个位置的节点元素
+     *
+     * @param index
+     * @param e
+     */
+    public void set(int index, E e) {
+        if (index < 0 || index >= size) {
+            throw new IllegalArgumentException("set failed.index is illegal ");
+        }
+        Node cur = dummyHead.next;
+        for (int i = 0; i < index; i++) {
+            cur = cur.next;
+        }
+        cur.e = e;
+    }
+
+    @Override
+    public String toString() {
+
+        StringBuilder res = new StringBuilder();
+        Node cur = dummyHead.next;
+        while (cur != null) {
+            res.append(cur + "->");
+            cur = cur.next;
+        }
+        res.append("NULL");
+        return res.toString();
+    }
+
+    public static void main(String[] args) {
+        LinkedList<Integer> linkedList = new LinkedList<>();
+        for (int i = 0; i < 5; i++) {
+            linkedList.addFirst(i);
+            System.out.println(linkedList);
+        }
+        linkedList.add(2, 777);
+        System.out.println(linkedList);
     }
 }
