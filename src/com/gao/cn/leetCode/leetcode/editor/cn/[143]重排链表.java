@@ -57,15 +57,14 @@ class Solution4 {
         if (head == null) {
             return;
         }
-        ListNode tail = head;
-        while (tail.next != null) {
-            tail = tail.next;
+        ListNode cur = head;
+        int size = 1;
+        while(cur.next != null){
+            size++;
+            cur = cur.next;
         }
-        head.next = tail;
-        tail.next = null;
-        if(head.next != null){
-            reorderList(head.next);
-        }
+        int[] a = new int[size];
+
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
