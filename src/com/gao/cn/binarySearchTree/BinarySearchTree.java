@@ -35,4 +35,21 @@ public class BinarySearchTree<E extends Comparable<E>> {
     public boolean isEmpty() {
         return size == 0;
     }
+
+    public void add(E e) {
+        root = add(root, e);
+    }
+
+    private Node add(Node node, E e) {
+        if (node == null) {
+            size++;
+            return new Node(e);
+        }
+        if (e.compareTo(node.e) < 0) {
+            node.left = add(node.left, e);
+        } else {
+            node.right = add(node.right, e);
+        }
+        return node;
+    }
 }
