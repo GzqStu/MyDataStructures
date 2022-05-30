@@ -3,6 +3,17 @@
   <component name="LeetcodeEditor">
     <option name="projectConfig">
       <map>
+        <entry key="$PROJECT_DIR$/src/com/gao/cn/leetCode/leetcode/editor/cn/[143]重排链表.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/com/gao/cn/leetCode/leetcode/editor/cn/doc/content/[143]重排链表.md" />
+              <option name="frontendQuestionId" value="leetcode.cn143" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/com/gao/cn/leetCode/leetcode/editor/cn/[143]重排链表.java" />
+              <option name="titleSlug" value="reorder-list" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/com/gao/cn/leetCode/leetcode/editor/cn/[203]移除链表元素.java">
           <value>
             <LeetcodeEditor>

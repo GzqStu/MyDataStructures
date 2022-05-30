@@ -43,4 +43,19 @@ public class ListNode {
         ret.append(" Null");
         return ret.toString();
     }
+
+    public ListNode sortList(ListNode head) {
+        if (head.next == null) {
+            return head;
+        }
+        ListNode cur = sortList(head.next);
+        while(cur.next != null){
+            if(head.val > cur.val){
+                cur.next = head;
+                head.next = null;
+                head = cur;
+            }
+        }
+        return head;
+    }
 }

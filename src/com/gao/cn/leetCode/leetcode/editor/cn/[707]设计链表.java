@@ -113,7 +113,6 @@ class MyLinkedList {
         }
         Node delNode = prev.next;
         prev.next = delNode.next;
-        delNode = null;
         size--;
     }
 }
