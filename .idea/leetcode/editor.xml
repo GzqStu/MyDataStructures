@@ -58,6 +58,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/com/gao/cn/leetCode/leetcode/editor/cn/[804]唯一摩尔斯密码词.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/com/gao/cn/leetCode/leetcode/editor/cn/doc/content/[804]唯一摩尔斯密码词.md" />
+              <option name="frontendQuestionId" value="leetcode.cn804" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/com/gao/cn/leetCode/leetcode/editor/cn/[804]唯一摩尔斯密码词.java" />
+              <option name="titleSlug" value="unique-morse-code-words" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
       </map>
     </option>
   </component>
