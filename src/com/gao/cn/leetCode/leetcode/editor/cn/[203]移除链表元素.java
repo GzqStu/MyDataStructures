@@ -1,4 +1,5 @@
-package com.gao.cn.leetCode.leetcode.editor.cn;//给你一个链表的头节点 head 和一个整数 val ，请你删除链表中所有满足 Node.val == val 的节点，并返回 新的头节点 。
+package com.gao.cn.leetCode.leetcode.editor.cn;
+//给你一个链表的头节点 head 和一个整数 val ，请你删除链表中所有满足 Node.val == val 的节点，并返回 新的头节点 。
 // 
 //
 // 示例 1： 
@@ -64,6 +65,13 @@ class Solution1 {
             }
         }
         return head;
+    }
+    public static void main(String[] args) {
+        int[] nums = {1, 2, 6, 3, 4, 5, 6};
+        ListNode cur = new ListNode(nums);
+        System.out.println(cur);
+        new Solution1().removeElements(cur, 6);
+        System.out.println(cur);
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
