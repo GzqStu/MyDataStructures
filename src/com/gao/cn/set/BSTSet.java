@@ -1,14 +1,16 @@
 package com.gao.cn.set;
 
+import com.gao.cn.binarySearchTree.BinarySearchTree;
+
 /**
  * @author ：gaozhiqi
  * @date ：2022/5/31 17:16
  */
 public class BSTSet <E extends Comparable<E>> implements Set<E>{
 
-    private BSTSet<E> bst;
+    private BinarySearchTree<E> bst;
     public BSTSet(){
-        bst = new BSTSet<>();
+        bst = new BinarySearchTree<>();
     }
 
     @Override
@@ -28,7 +30,7 @@ public class BSTSet <E extends Comparable<E>> implements Set<E>{
 
     @Override
     public int getSize() {
-        return bst.getSize();
+        return bst.size();
     }
 
     @Override
