@@ -62,17 +62,19 @@ class Trie {
             this(false);
         }
     }
+
     private Node root;
+
     public Trie() {
         root = new Node();
     }
 
     public void insert(String word) {
         Node cur = root;
-        for(int i = 0;i<word.length();i++){
-            char c  = word.charAt(i);
-            if(cur.next.get(c) == null){
-                cur = cur.next.put(c,new Node());
+        for (int i = 0; i < word.length(); i++) {
+            char c = word.charAt(i);
+            if (cur.next.get(c) == null) {
+                cur = cur.next.put(c, new Node());
             }
             cur = cur.next.get(c);
         }
@@ -81,9 +83,9 @@ class Trie {
 
     public boolean search(String word) {
         Node cur = root;
-        for(int i = 0;i<word.length();i++){
-            char c  = word.charAt(i);
-            if(cur.next.get(c) == null){
+        for (int i = 0; i < word.length(); i++) {
+            char c = word.charAt(i);
+            if (cur.next.get(c) == null) {
                 return false;
             }
             cur = cur.next.get(c);
@@ -93,9 +95,9 @@ class Trie {
 
     public boolean startsWith(String prefix) {
         Node cur = root;
-        for(int i = 0;i<prefix.length();i++){
-            char c  = prefix.charAt(i);
-            if(cur.next.get(c) == null){
+        for (int i = 0; i < prefix.length(); i++) {
+            char c = prefix.charAt(i);
+            if (cur.next.get(c) == null) {
                 return false;
             }
             cur = cur.next.get(c);
