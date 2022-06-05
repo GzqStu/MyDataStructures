@@ -102,6 +102,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/com/gao/cn/leetCode/leetcode/editor/cn/[677]键值映射.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/com/gao/cn/leetCode/leetcode/editor/cn/doc/content/[677]键值映射.md" />
+              <option name="frontendQuestionId" value="leetcode.cn677" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/com/gao/cn/leetCode/leetcode/editor/cn/[677]键值映射.java" />
+              <option name="titleSlug" value="map-sum-pairs" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/com/gao/cn/leetCode/leetcode/editor/cn/[707]设计链表.java">
           <value>
             <LeetcodeEditor>
